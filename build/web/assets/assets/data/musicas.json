@@ -1,0 +1,74 @@
+[
+  {
+    "titulo": "Perfect",
+    "artista": "Ed Sheeran",
+    "imagem": "assets/images/musicas/perfect.jpg",
+    "youtube": "https://www.youtube.com/watch?v=2Vv-BfVoq4g&list=RD2Vv-BfVoq4g&start_radio=1"
+  },
+  {
+    "titulo": "A Thousand Years",
+    "artista": "Christina Perri",
+    "imagem": "assets/images/musicas/thousand_years.jpg",
+    "youtube": "https://www.youtube.com/watch?v=rtOvBOTyX00&list=RDrtOvBOTyX00&start_radio=1"
+  },
+  {
+    "titulo": "A Vida É Boa Com Você",
+    "artista": "Bryan Behr",
+    "imagem": "assets/images/musicas/a_vida_é_boa_com_você.jpg",
+    "youtube": "https://www.youtube.com/watch?v=w3l6mWtvS4g&list=RDw3l6mWtvS4g&start_radio=1"
+  },
+  {
+    "titulo": "Sonho de Todo Casal",
+    "artista": "Marcos & belutti",
+    "imagem": "assets/images/musicas/sonho_de_todo_casal.jpg",
+    "youtube": "https://www.youtube.com/watch?v=oejyRpHiP2M&list=RDoejyRpHiP2M&start_radio=1"
+  },
+  {
+    "titulo": "É Tu",
+    "artista": "ALMAR",
+    "imagem": "assets/images/musicas/é_tu.jpg",
+    "youtube": "https://www.youtube.com/watch?v=pjTcHiTtdBM&list=RDpjTcHiTtdBM&start_radio=1"
+  },
+  {
+    "titulo": "Sorte",
+    "artista": "Diego & Victor Hugo",
+    "imagem": "assets/images/musicas/sorte.jpg",
+    "youtube": "https://www.youtube.com/watch?v=28NsEcvgZv0&list=RD28NsEcvgZv0&start_radio=1"
+  },
+  {
+    "titulo": "Vem Pra Minha Vida",
+    "artista": "Henrique & Juliano",
+    "imagem": "assets/images/musicas/vem_pra_minha_vida.jpg",
+    "youtube": "https://www.youtube.com/watch?v=r73ANL4ecnE&list=RDr73ANL4ecnE&start_radio=1"
+  },
+  {
+    "titulo": "You Are The Reason",
+    "artista": "Calum Scott",
+    "imagem": "assets/images/musicas/you_are_the_reason.jpg",
+    "youtube": "https://www.youtube.com/watch?v=ShZ978fBl6Y&list=RDShZ978fBl6Y&start_radio=1"
+  },
+  {
+    "titulo": "Evidências",
+    "artista": "Chitãozinho & Xororó",
+    "imagem": "assets/images/musicas/evidências.jpg",
+    "youtube": "https://www.youtube.com/watch?v=ePjtnSPFWK8&list=RDePjtnSPFWK8&start_radio=1"
+  },
+  {
+    "titulo": "Mulher Maravilha",
+    "artista": "Zé Neto & Cristiano",
+    "imagem": "assets/images/musicas/mulher_maravilha.jpg",
+    "youtube": "https://www.youtube.com/watch?v=Fzmvv8fSyQs&list=RDFzmvv8fSyQs&start_radio=1"
+  },
+  {
+    "titulo": "Clichê",
+    "artista": "João Neto & Frederico",
+    "imagem": "assets/images/musicas/clichê.jpg",
+    "youtube": "https://www.youtube.com/watch?v=J2OoM-IRl6M&list=RDJ2OoM-IRl6M&start_radio=1"
+  },
+  {
+    "titulo": "Eles se Amam",
+    "artista": "Vocal Livre",
+    "imagem": "assets/images/musicas/eles_se_amam.jpg",
+    "youtube": "https://www.youtube.com/watch?v=SxJGXR9cHgs&list=RDSxJGXR9cHgs&start_radio=1"
+  }
+]

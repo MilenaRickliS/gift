@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/menu.dart';
 import '../widgets/footer.dart';
+import '../widgets/carrossel.dart';
 
 class Declaracao extends StatefulWidget {
   const Declaracao({super.key});
@@ -303,6 +304,8 @@ class _DeclaracaoState extends State<Declaracao>
                       ],
                     ),
                   ),
+
+                  const Carrossel(),
 
                  
                   const Footer(),

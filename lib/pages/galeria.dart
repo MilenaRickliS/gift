@@ -265,7 +265,7 @@ class _GaleriaState extends State<Galeria> {
                 children: [
                   const _CabecalhoGaleria(),
 
-                  // MENU DAS CATEGORIAS
+                
                   _MenuGrupos(
                     grupos: Galeria.fotosPorGrupo.keys.toList(),
                     selecionado: grupoSelecionado,
@@ -282,11 +282,11 @@ class _GaleriaState extends State<Galeria> {
 
                   const SizedBox(height: 35),
 
-                  // SEM GRUPO SELECIONADO
+                
                   if (grupoSelecionado == null)
                     const _InicioGaleria()
 
-                  // COM GRUPO SELECIONADO
+               
                   else
                     _GaleriaDoGrupo(
                       grupo: grupoSelecionado!,

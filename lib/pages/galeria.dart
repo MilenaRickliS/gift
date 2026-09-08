@@ -5,206 +5,247 @@ import 'package:flutter/material.dart';
 import '../widgets/menu.dart';
 import '../widgets/footer.dart';
 
-class Galeria extends StatelessWidget {
+class Galeria extends StatefulWidget {
   const Galeria({super.key});
 
-  static const List<String> fotos = [
-  'assets/images/foto_001.png',
-  'assets/images/foto_002.jpg',
-  'assets/images/foto_003.jpg',
-  'assets/images/foto_004.jpg',
-  'assets/images/foto_005.jpg',
-  'assets/images/foto_006.jpg',
-  'assets/images/foto_007.jpg',
-  'assets/images/foto_008.jpg',
-  'assets/images/foto_009.jpg',
-  'assets/images/foto_010.jpg',
-  'assets/images/foto_011.jpg',
-  'assets/images/foto_012.jpg',
-  'assets/images/foto_013.jpg',
-  'assets/images/foto_014.jpg',
-  'assets/images/foto_015.jpg',
-  'assets/images/foto_016.jpg',
-  'assets/images/foto_017.jpg',
-  'assets/images/foto_018.jpg',
-  'assets/images/foto_019.jpg',
-  'assets/images/foto_020.jpg',
-  'assets/images/foto_021.jpg',
-  'assets/images/foto_022.jpg',
-  'assets/images/foto_023.jpg',
-  'assets/images/foto_024.jpg',
-  'assets/images/foto_025.jpg',
-  'assets/images/foto_026.jpg',
-  'assets/images/foto_027.jpg',
-  'assets/images/foto_028.jpg',
-  'assets/images/foto_029.jpg',
-  'assets/images/foto_030.jpg',
-  'assets/images/foto_031.jpg',
-  'assets/images/foto_032.jpg',
-  'assets/images/foto_033.jpg',
-  'assets/images/foto_034.jpg',
-  'assets/images/foto_035.jpg',
-  'assets/images/foto_036.jpg',
-  'assets/images/foto_037.jpg',
-  'assets/images/foto_038.jpg',
-  'assets/images/foto_039.jpg',
-  'assets/images/foto_040.jpg',
-  'assets/images/foto_041.jpg',
-  'assets/images/foto_042.jpg',
-  'assets/images/foto_043.jpg',
-  'assets/images/foto_044.jpg',
-  'assets/images/foto_045.jpg',
-  'assets/images/foto_046.jpg',
-  'assets/images/foto_047.jpg',
-  'assets/images/foto_048.png',
-  'assets/images/foto_049.png',
-  'assets/images/foto_050.png',
-  'assets/images/foto_051.jpg',
-  'assets/images/foto_052.jpg',
-  'assets/images/foto_053.jpg',
-  'assets/images/foto_054.jpg',
-  'assets/images/foto_055.jpg',
-  'assets/images/foto_056.jpg',
-  'assets/images/foto_057.jpg',
-  'assets/images/foto_058.jpg',
-  'assets/images/foto_059.jpg',
-  'assets/images/foto_060.jpg',
-  'assets/images/foto_061.jpg',
-  'assets/images/foto_062.jpg',
-  'assets/images/foto_063.jpg',
-  'assets/images/foto_064.jpg',
-  'assets/images/foto_065.jpg',
-  'assets/images/foto_066.jpg',
-  'assets/images/foto_067.jpg',
-  'assets/images/foto_068.jpg',
-  'assets/images/foto_069.jpg',
-  'assets/images/foto_070.jpg',
-  'assets/images/foto_071.jpg',
-  'assets/images/foto_072.jpg',
-  'assets/images/foto_073.jpg',
-  'assets/images/foto_074.jpg',
-  'assets/images/foto_075.jpg',
-  'assets/images/foto_076.jpg',
-  'assets/images/foto_077.jpg',
-  'assets/images/foto_078.jpg',
-  'assets/images/foto_079.jpg',
-  'assets/images/foto_080.jpg',
-  'assets/images/foto_081.jpg',
-  'assets/images/foto_082.jpg',
-  'assets/images/foto_083.jpg',
-  'assets/images/foto_084.jpg',
-  'assets/images/foto_085.png',
-  'assets/images/foto_086.png',
-  'assets/images/foto_087.png',
-  'assets/images/foto_088.jpeg',
-  'assets/images/foto_089.jpg',
-  'assets/images/foto_090.jpg',
-  'assets/images/foto_091.jpg',
-  'assets/images/foto_092.jpg',
-  'assets/images/foto_093.jpg',
-  'assets/images/foto_094.png',
-  'assets/images/foto_095.jpg',
-  'assets/images/foto_096.jpg',
-  'assets/images/foto_097.jpg',
-  'assets/images/foto_098.jpg',
-  'assets/images/foto_099.jpg',
-  'assets/images/foto_100.jpg',
-  'assets/images/foto_101.jpg',
-  'assets/images/foto_102.jpg',
-  'assets/images/foto_103.jpg',
-  'assets/images/foto_104.jpg',
-  'assets/images/foto_105.jpg',
-  'assets/images/foto_106.jpg',
-  'assets/images/foto_107.jpg',
-  'assets/images/foto_108.jpg',
-  'assets/images/foto_109.jpg',
-  'assets/images/foto_110.jpg',
-  'assets/images/foto_111.jpg',
-  'assets/images/foto_112.jpg',
-  'assets/images/foto_113.jpg',
-  'assets/images/foto_114.jpg',
-  'assets/images/foto_115.jpg',
-  'assets/images/foto_116.jpg',
-  'assets/images/foto_117.jpg',
-  'assets/images/foto_118.jpg',
-  'assets/images/foto_119.jpg',
-  'assets/images/foto_120.jpg',
-  'assets/images/foto_121.jpg',
-  'assets/images/foto_122.jpg',
-  'assets/images/foto_123.jpg',
-  'assets/images/foto_124.jpg',
-  'assets/images/foto_125.jpg',
-  'assets/images/foto_126.jpg',
-  'assets/images/foto_127.jpg',
-  'assets/images/foto_128.jpg',
-  'assets/images/foto_129.jpg',
-  'assets/images/foto_130.jpg',
-  'assets/images/foto_131.jpg',
-  'assets/images/foto_132.jpg',
-  'assets/images/foto_133.jpg',
-  'assets/images/foto_134.jpg',
-  'assets/images/foto_135.jpg',
-  'assets/images/foto_136.jpg',
-  'assets/images/foto_137.jpg',
-  'assets/images/foto_138.jpg',
-  'assets/images/foto_139.jpg',
-  'assets/images/foto_140.jpg',
-  'assets/images/foto_141.jpg',
-  'assets/images/foto_142.jpg',
-  'assets/images/foto_143.jpg',
-  'assets/images/foto_144.jpg',
-  'assets/images/foto_145.jpg',
-  'assets/images/foto_146.jpg',
-  'assets/images/foto_147.jpg',
-  'assets/images/foto_148.jpg',
-  'assets/images/foto_149.jpg',
-  'assets/images/foto_150.jpg',
-  'assets/images/foto_151.jpg',
-  'assets/images/foto_152.jpg',
-  'assets/images/foto_153.jpg',
-  'assets/images/foto_154.jpg',
-  'assets/images/foto_155.jpg',
-  'assets/images/foto_156.jpg',
-  'assets/images/foto_157.jpg',
-  'assets/images/foto_158.jpg',
-  'assets/images/foto_159.jpg',
-  'assets/images/foto_160.jpg',
-  'assets/images/foto_161.jpg',
-  'assets/images/foto_162.jpg',
-  'assets/images/foto_163.jpg',
-  'assets/images/foto_164.jpg',
-  'assets/images/foto_165.png',
-  'assets/images/foto_166.png',
-  'assets/images/foto_167.png',
-  'assets/images/foto_168.png',
-  'assets/images/foto_169.png',
-  'assets/images/foto_170.png',
-  'assets/images/foto_171.png',
-  'assets/images/foto_172.png',
-  'assets/images/foto_173.png',
-  'assets/images/foto_174.jpg',
-  'assets/images/foto_175.jpg',
-  'assets/images/foto_176.jpg',
-  'assets/images/foto_177.jpg',
-  'assets/images/foto_178.jpg',
-  'assets/images/foto_179.jpg',
-  'assets/images/foto_180.jpg',
-  'assets/images/foto_181.jpg',
-  'assets/images/foto_182.jpg',
-  'assets/images/foto_183.jpg',
-  'assets/images/foto_184.jpg',
-  'assets/images/foto_185.jpg',
-  'assets/images/foto_186.jpg',
-  'assets/images/foto_187.jpg',
-  'assets/images/foto_188.jpg',
-  'assets/images/foto_189.jpg',
-  'assets/images/foto_190.jpeg',
-  'assets/images/foto_191.jpg',
-  'assets/images/foto_192.jpg',
-  'assets/images/foto_193.jpg',
-  'assets/images/foto_194.png',
-  'assets/images/foto_195.jpg',
-];
+  static const Map<String, List<String>> fotosPorGrupo = {
+    'Namoro': [
+      'assets/images/foto_001.png',
+      'assets/images/foto_048.png',
+      'assets/images/foto_049.png',
+      'assets/images/foto_089.jpg',
+      'assets/images/foto_090.jpg',
+      'assets/images/foto_091.jpg',
+      'assets/images/foto_092.jpg',
+      'assets/images/foto_093.jpg',
+      'assets/images/foto_097.jpg',
+      'assets/images/foto_098.jpg',
+      'assets/images/foto_099.jpg',
+      'assets/images/foto_100.jpg',
+      'assets/images/foto_101.jpg',
+      'assets/images/foto_102.jpg',
+      'assets/images/foto_103.jpg',
+      'assets/images/foto_104.jpg',
+      'assets/images/foto_105.jpg',
+      'assets/images/foto_106.jpg',
+      'assets/images/foto_107.jpg',
+      'assets/images/foto_108.jpg',
+      'assets/images/foto_109.jpg',
+      'assets/images/foto_110.jpg',
+      'assets/images/foto_111.jpg',
+      'assets/images/foto_112.jpg',
+      'assets/images/foto_113.jpg',
+      'assets/images/foto_141.jpg',
+      'assets/images/foto_142.jpg',
+      'assets/images/foto_143.jpg',
+      'assets/images/foto_144.jpg',
+      'assets/images/foto_145.jpg',
+      'assets/images/foto_196.webp',
+    ],
+
+    'Noivos': [
+      'assets/images/foto_007.jpg',
+      'assets/images/foto_008.jpg',
+      'assets/images/foto_050.png',
+      'assets/images/foto_088.jpeg',
+      'assets/images/foto_095.jpg',
+      'assets/images/foto_096.jpg',
+      'assets/images/foto_114.jpg',
+    ],
+
+    'Casamento': [
+      'assets/images/foto_063.jpg',
+      'assets/images/foto_064.jpg',
+      'assets/images/foto_065.jpg',
+      'assets/images/foto_066.jpg',
+      'assets/images/foto_067.jpg',
+      'assets/images/foto_068.jpg',
+      'assets/images/foto_069.jpg',
+      'assets/images/foto_070.jpg',
+      'assets/images/foto_071.jpg',
+      'assets/images/foto_072.jpg',
+      'assets/images/foto_073.jpg',
+      'assets/images/foto_074.jpg',
+      'assets/images/foto_075.jpg',
+      'assets/images/foto_076.jpg',
+      'assets/images/foto_077.jpg',
+      'assets/images/foto_078.jpg',
+      'assets/images/foto_079.jpg',
+      'assets/images/foto_080.jpg',
+      'assets/images/foto_081.jpg',
+      'assets/images/foto_082.jpg',
+      'assets/images/foto_083.jpg',
+      'assets/images/foto_084.jpg',
+      'assets/images/foto_115.jpg',
+      'assets/images/foto_160.jpg',
+      'assets/images/foto_161.jpg',
+    ],
+
+    'Lua de mel': [
+      'assets/images/foto_047.jpg',
+      'assets/images/foto_059.jpg',
+      'assets/images/foto_060.jpg',
+      'assets/images/foto_061.jpg',
+      'assets/images/foto_062.jpg',
+      'assets/images/foto_155.jpg',
+      'assets/images/foto_156.jpg',
+      'assets/images/foto_157.jpg',
+      'assets/images/foto_158.jpg',
+      'assets/images/foto_159.jpg',
+      'assets/images/foto_165.png',
+      'assets/images/foto_166.png',
+      'assets/images/foto_167.png',
+      'assets/images/foto_168.png',
+      'assets/images/foto_169.png',
+      'assets/images/foto_170.png',
+      'assets/images/foto_171.png',
+      'assets/images/foto_172.png',
+      'assets/images/foto_173.png',
+    ],
+
+    'Esperando a Elizabeth': [
+      'assets/images/foto_011.jpg',
+      'assets/images/foto_013.jpg',
+      'assets/images/foto_014.jpg',
+      'assets/images/foto_015.jpg',
+      'assets/images/foto_016.jpg',
+      'assets/images/foto_017.jpg',
+      'assets/images/foto_019.jpg',
+      'assets/images/foto_116.jpg',
+      'assets/images/foto_162.jpg',
+      'assets/images/foto_163.jpg',
+      'assets/images/foto_164.jpg',
+      'assets/images/foto_174.jpg',
+      'assets/images/foto_175.jpg',
+      'assets/images/foto_176.jpg',
+      'assets/images/foto_177.jpg',
+      'assets/images/foto_178.jpg',
+      'assets/images/foto_179.jpg',
+      'assets/images/foto_180.jpg',
+      'assets/images/foto_181.jpg',
+      'assets/images/foto_182.jpg',
+      'assets/images/foto_183.jpg',
+      'assets/images/foto_184.jpg',
+      'assets/images/foto_185.jpg',
+      'assets/images/foto_187.jpg',
+      'assets/images/foto_188.jpg',
+      'assets/images/foto_191.jpg',
+      'assets/images/foto_192.jpg',
+      'assets/images/foto_193.jpg',
+    ],
+
+    'Aniversário Elizabeth': [
+      'assets/images/foto_002.jpg',
+      'assets/images/foto_003.jpg',
+      'assets/images/foto_004.jpg',
+      'assets/images/foto_005.jpg',
+      'assets/images/foto_037.jpg',
+      'assets/images/foto_041.jpg',
+      'assets/images/foto_042.jpg',
+      'assets/images/foto_043.jpg',
+      'assets/images/foto_044.jpg',
+      'assets/images/foto_045.jpg',
+      'assets/images/foto_046.jpg',
+      'assets/images/foto_123.jpg',
+      'assets/images/foto_124.jpg',
+    ],
+
+    'Esperando o Joaquim': [
+      'assets/images/foto_125.jpg',
+      'assets/images/foto_126.jpg',
+      'assets/images/foto_127.jpg',
+      'assets/images/foto_128.jpg',
+      'assets/images/foto_129.jpg',
+      'assets/images/foto_130.jpg',
+      'assets/images/foto_131.jpg',
+      'assets/images/foto_132.jpg',
+      'assets/images/foto_133.jpg',
+      'assets/images/foto_134.jpg',
+      'assets/images/foto_135.jpg',
+      'assets/images/foto_136.jpg',
+      'assets/images/foto_137.jpg',
+      'assets/images/foto_138.jpg',
+      'assets/images/foto_139.jpg',
+    ],
+
+    'Aniversário Joaquim': [
+      'assets/images/foto_051.jpg',
+      'assets/images/foto_052.jpg',
+      'assets/images/foto_053.jpg',
+      'assets/images/foto_054.jpg',
+      'assets/images/foto_055.jpg',
+      'assets/images/foto_056.jpg',
+      'assets/images/foto_057.jpg',
+      'assets/images/foto_058.jpg',
+    ],
+
+    'Família': [
+      'assets/images/foto_020.jpg',
+      'assets/images/foto_021.jpg',
+      'assets/images/foto_022.jpg',
+      'assets/images/foto_023.jpg',
+      'assets/images/foto_024.jpg',
+      'assets/images/foto_025.jpg',
+      'assets/images/foto_026.jpg',
+      'assets/images/foto_027.jpg',
+      'assets/images/foto_028.jpg',
+      'assets/images/foto_029.jpg',
+      'assets/images/foto_030.jpg',
+      'assets/images/foto_031.jpg',
+      'assets/images/foto_033.jpg',
+      'assets/images/foto_034.jpg',
+      'assets/images/foto_035.jpg',
+      'assets/images/foto_036.jpg',
+      'assets/images/foto_040.jpg',
+      'assets/images/foto_118.jpg',
+      'assets/images/foto_122.jpg',
+      'assets/images/foto_140.jpg',
+      'assets/images/foto_146.jpg',
+      'assets/images/foto_147.jpg',
+      'assets/images/foto_148.jpg',
+      'assets/images/foto_149.jpg',
+      'assets/images/foto_150.jpg',
+      'assets/images/foto_190.jpeg',
+      'assets/images/foto_194.png',
+    ],
+
+    'Outros momentos especiais juntos': [
+      'assets/images/foto_006.jpg',
+      'assets/images/foto_009.jpg',
+      'assets/images/foto_010.jpg',
+      'assets/images/foto_012.jpg',
+      'assets/images/foto_018.jpg',
+      'assets/images/foto_032.jpg',
+      'assets/images/foto_038.jpg',
+      'assets/images/foto_039.jpg',
+      'assets/images/foto_117.jpg',
+      'assets/images/foto_119.jpg',
+      'assets/images/foto_120.jpg',
+      'assets/images/foto_121.jpg',
+      'assets/images/foto_151.jpg',
+      'assets/images/foto_152.jpg',
+      'assets/images/foto_153.jpg',
+      'assets/images/foto_154.jpg',
+      'assets/images/foto_186.jpg',
+      'assets/images/foto_189.jpg',
+      'assets/images/foto_195.jpg',
+    ],
+  };
+
+  @override
+  State<Galeria> createState() => _GaleriaState();
+}
+
+class _GaleriaState extends State<Galeria> {
+  String? grupoSelecionado;
+
+  List<String> get fotosSelecionadas {
+    if (grupoSelecionado == null) {
+      return [];
+    }
+
+    return Galeria.fotosPorGrupo[grupoSelecionado] ?? [];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -224,51 +265,35 @@ class Galeria extends StatelessWidget {
                 children: [
                   const _CabecalhoGaleria(),
 
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: mobile ? 18 : 60,
-                      vertical: mobile ? 30 : 50,
-                    ),
-                    child: LayoutBuilder(
-                      builder: (context, constraints) {
-                        int colunas;
-
-                        if (constraints.maxWidth < 550) {
-                          colunas = 2;
-                        } else if (constraints.maxWidth < 900) {
-                          colunas = 3;
-                        } else if (constraints.maxWidth < 1300) {
-                          colunas = 4;
+                  // MENU DAS CATEGORIAS
+                  _MenuGrupos(
+                    grupos: Galeria.fotosPorGrupo.keys.toList(),
+                    selecionado: grupoSelecionado,
+                    onSelecionar: (grupo) {
+                      setState(() {
+                        if (grupoSelecionado == grupo) {
+                          grupoSelecionado = null;
                         } else {
-                          colunas = 5;
+                          grupoSelecionado = grupo;
                         }
-
-                        return GridView.builder(
-                          shrinkWrap: true,
-                          physics: const NeverScrollableScrollPhysics(),
-                          itemCount: fotos.length,
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: colunas,
-                            crossAxisSpacing: mobile ? 10 : 18,
-                            mainAxisSpacing: mobile ? 10 : 18,
-                            childAspectRatio: 0.82,
-                          ),
-                          itemBuilder: (context, index) {
-                            final foto = fotos[index];
-
-                            return _FotoGaleria(
-                              foto: foto,
-                              indice: index,
-                              fotos: fotos,
-                            );
-                          },
-                        );
-                      },
-                    ),
+                      });
+                    },
                   ),
 
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 35),
+
+                  // SEM GRUPO SELECIONADO
+                  if (grupoSelecionado == null)
+                    const _InicioGaleria()
+
+                  // COM GRUPO SELECIONADO
+                  else
+                    _GaleriaDoGrupo(
+                      grupo: grupoSelecionado!,
+                      fotos: fotosSelecionadas,
+                    ),
+
+                  const SizedBox(height: 60),
 
                   const Footer(),
                 ],
@@ -335,6 +360,263 @@ class _CabecalhoGaleria extends StatelessWidget {
               color: const Color(0xFFC98B9E),
               borderRadius: BorderRadius.circular(20),
             ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _MenuGrupos extends StatelessWidget {
+  final List<String> grupos;
+  final String? selecionado;
+  final ValueChanged<String> onSelecionar;
+
+  const _MenuGrupos({
+    required this.grupos,
+    required this.selecionado,
+    required this.onSelecionar,
+  });
+
+  IconData _icone(String grupo) {
+    switch (grupo) {
+      case 'Namoro':
+        return Icons.favorite_outline_rounded;
+
+      case 'Noivos':
+        return Icons.diamond_outlined;
+
+      case 'Casamento':
+        return Icons.favorite_rounded;
+
+      case 'Lua de mel':
+        return Icons.flight_takeoff_rounded;
+
+      case 'Esperando a Elizabeth':
+      case 'Esperando o Joaquim':
+        return Icons.child_care_rounded;
+
+      case 'Aniversário Elizabeth':
+      case 'Aniversário Joaquim':
+        return Icons.cake_rounded;
+
+      case 'Família':
+        return Icons.family_restroom_rounded;
+
+      default:
+        return Icons.auto_awesome_rounded;
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final mobile = MediaQuery.of(context).size.width < 800;
+
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: mobile ? 16 : 60,
+      ),
+      child: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(
+            maxWidth: 1200,
+          ),
+          child: Wrap(
+            alignment: WrapAlignment.center,
+            spacing: 10,
+            runSpacing: 10,
+            children: grupos.map((grupo) {
+              final ativo = selecionado == grupo;
+
+              return InkWell(
+                onTap: () => onSelecionar(grupo),
+                borderRadius: BorderRadius.circular(40),
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 200),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: mobile ? 13 : 18,
+                    vertical: mobile ? 10 : 12,
+                  ),
+                  decoration: BoxDecoration(
+                    color: ativo
+                        ? const Color(0xFFC98B9E)
+                        : Colors.white,
+                    borderRadius: BorderRadius.circular(40),
+                    border: Border.all(
+                      color: ativo
+                          ? const Color(0xFFC98B9E)
+                          : const Color(0xFFE8CDD6),
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(
+                          alpha: ativo ? 0.09 : 0.04,
+                        ),
+                        blurRadius: ativo ? 15 : 8,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(
+                        _icone(grupo),
+                        size: 18,
+                        color: ativo
+                            ? Colors.white
+                            : const Color(0xFFC98B9E),
+                      ),
+
+                      const SizedBox(width: 7),
+
+                      Text(
+                        grupo,
+                        style: TextStyle(
+                          fontSize: mobile ? 12.5 : 14,
+                          fontWeight: FontWeight.w600,
+                          color: ativo
+                              ? Colors.white
+                              : const Color(0xFF6F4C59),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            }).toList(),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _InicioGaleria extends StatelessWidget {
+  const _InicioGaleria();
+
+  @override
+  Widget build(BuildContext context) {
+    final mobile = MediaQuery.of(context).size.width < 800;
+
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: 20,
+        vertical: mobile ? 20 : 35,
+      ),
+      child: Column(
+        children: [
+          Image.asset(
+            'assets/images/book.png',
+            width: mobile ? 230 : 340,
+            height: mobile ? 230 : 340,
+            fit: BoxFit.contain,
+          ),
+
+          const SizedBox(height: 20),
+
+          Text(
+            'Escolha um capítulo da nossa história',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: mobile ? 22 : 29,
+              fontWeight: FontWeight.bold,
+              color: const Color(0xFF5C3946),
+            ),
+          ),
+
+          const SizedBox(height: 10),
+
+          Text(
+            'Cada foto guarda um pedacinho de tudo que vivemos juntos. ❤️',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: mobile ? 14 : 16,
+              height: 1.5,
+              color: const Color(0xFF8A6975),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _GaleriaDoGrupo extends StatelessWidget {
+  final String grupo;
+  final List<String> fotos;
+
+  const _GaleriaDoGrupo({
+    required this.grupo,
+    required this.fotos,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final mobile = MediaQuery.of(context).size.width < 800;
+
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: mobile ? 18 : 60,
+      ),
+      child: Column(
+        children: [
+          Text(
+            grupo,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: mobile ? 25 : 34,
+              fontWeight: FontWeight.bold,
+              color: const Color(0xFF5C3946),
+            ),
+          ),
+
+          const SizedBox(height: 7),
+
+          Text(
+            '${fotos.length} ${fotos.length == 1 ? 'momento' : 'momentos'} ❤️',
+            style: TextStyle(
+              fontSize: mobile ? 13 : 15,
+              color: const Color(0xFF9E7A87),
+            ),
+          ),
+
+          const SizedBox(height: 30),
+
+          LayoutBuilder(
+            builder: (context, constraints) {
+              int colunas;
+
+              if (constraints.maxWidth < 550) {
+                colunas = 2;
+              } else if (constraints.maxWidth < 900) {
+                colunas = 3;
+              } else if (constraints.maxWidth < 1300) {
+                colunas = 4;
+              } else {
+                colunas = 5;
+              }
+
+              return GridView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: fotos.length,
+                gridDelegate:
+                    SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: colunas,
+                  crossAxisSpacing: mobile ? 10 : 18,
+                  mainAxisSpacing: mobile ? 10 : 18,
+                  childAspectRatio: 0.82,
+                ),
+                itemBuilder: (context, index) {
+                  return _FotoGaleria(
+                    foto: fotos[index],
+                    indice: index,
+                    fotos: fotos,
+                  );
+                },
+              );
+            },
           ),
         ],
       ),

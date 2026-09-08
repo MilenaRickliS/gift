@@ -114,6 +114,7 @@ class _MusicaState extends State<Musica> {
                             titulo: musicaDoDia!['titulo'],
                             artista: musicaDoDia!['artista'],
                             imagem: musicaDoDia!['imagem'],
+                            frase: musicaDoDia!['frase'] ?? '',
                             onTap: () {
                               abrirYoutube(
                                 musicaDoDia!['youtube'],
@@ -155,6 +156,7 @@ class MusicaCard extends StatefulWidget {
   final String titulo;
   final String artista;
   final String imagem;
+  final String frase;
   final VoidCallback onTap;
 
   const MusicaCard({
@@ -162,6 +164,7 @@ class MusicaCard extends StatefulWidget {
     required this.titulo,
     required this.artista,
     required this.imagem,
+    required this.frase,
     required this.onTap,
   });
 
@@ -301,6 +304,32 @@ class _MusicaCardState extends State<MusicaCard> {
                     ),
                   ],
                 ),
+
+                if (widget.frase.isNotEmpty) ...[
+                  const SizedBox(height: 22),
+
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 14,
+                      vertical: 12,
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.05),
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: Text(
+                      '"${widget.frase}"',
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontSize: 14,
+                        height: 1.5,
+                        fontStyle: FontStyle.italic,
+                        color: Color(0xFFD8CDD1),
+                      ),
+                    ),
+                  ),
+                ],
 
                 const SizedBox(height: 18),
 
